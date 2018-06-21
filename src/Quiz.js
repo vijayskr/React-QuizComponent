@@ -20,9 +20,9 @@ class Quiz extends Component{
 
     handleResetClick()
     {
-        this.setState({quiz_position: 1})
-        this.props.resetClickHandler()
+        this.setState({ quiz_position: 1 })
     }
+
     render() {
         const isQuizEnd = 'false' ? ((this.state.quiz_position - 1) === quizData.quiz_questions.length) : 'true';
         let quizDisp;
