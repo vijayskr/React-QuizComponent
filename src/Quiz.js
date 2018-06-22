@@ -4,7 +4,8 @@ import QuizEnd from './QuizEnd.js'
 
 let quizData = require('./quiz_data.json')
 
-class Quiz extends Component{
+class Quiz extends Component
+{
     constructor(props)
     {
         super(props)
@@ -31,7 +32,9 @@ class Quiz extends Component{
             quizDisp = <QuizEnd resetClickHandler={this.handleResetClick.bind(this)}/>;
         }
         else {
-            quizDisp = <QuizQuestion quiz_question={quizData.quiz_questions[this.state.quiz_position - 1]} showNextQuestionHandler={this.showNextQuestion.bind(this)}/>;
+            quizDisp = <h1>
+                        <QuizQuestion quiz_question={quizData.quiz_questions[this.state.quiz_position - 1]} showNextQuestionHandler={this.showNextQuestion.bind(this)}/>
+                       </h1>;
         }
 
         return(
